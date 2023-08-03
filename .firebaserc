@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "compra61-d042e": {
+      "hosting": {
+        "compra61": [
+          "compra61-d042e"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "compra61-d042e"
+  }
+}

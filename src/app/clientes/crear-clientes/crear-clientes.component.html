@@ -1,0 +1,30 @@
+<p>
+    <mat-toolbar>
+      <span>{{title}}</span>
+    </mat-toolbar>
+    <mat-toolbar><span>Creacion de un Libro</span></mat-toolbar>
+    <button mat-stroked-button (click)="golistarlibros()">Listado de Libros</button>
+  <!-- <button mat-stroked-button (click)="golistarFactura()">Ver Facturas</button> -->
+  </p>
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+        <mat-label>Autor</mat-label>
+        <input matInput placeholder="autor del libro" id="txtcedula" name="txtcedula" [(ngModel)]="libro.autor" required pattern="^[a-zA-Z\s]*$" />
+        <div *ngIf="isInvalidInput(libro.autor)" class="error-message">
+          Solo se permiten letras y espacios.
+        </div>
+      </mat-form-field>
+      <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>Nombre</mat-label>
+      <input matInput placeholder="nombre/titulo del libro" id="txtNombre" name="txtNombre" [(ngModel)]="libro.nombre"/>
+      <div *ngIf="isInvalidInput(libro.nombre)" class="error-message">
+        Solo se permiten letras y espacios.
+      </div>
+    </mat-form-field>
+    
+  </form>
+  
+<button mat-stroked-button (click)="seleccion()">Guardar</button> <br>
+
+<!--<button mat-stroked-button (click)="goListarClientes()">Listado de facturaos</button>-->
